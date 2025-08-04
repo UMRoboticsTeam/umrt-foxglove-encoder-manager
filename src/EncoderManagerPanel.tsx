@@ -21,9 +21,9 @@ interface SetBoolResponse { // Renamed from EncoderManagerResponse
 function EncoderManagerPanel({ context }: { context: PanelExtensionContext }): ReactElement {
   const [feedback, setFeedback] = useState<string>('');
   // State to track the on/off status of each camera's encoder
-  const [isRoverEncoderOn, setIsRoverEncoderOn] = useState<boolean>(false);
-  const [isArm0EncoderOn, setIsArm0EncoderOn] = useState<boolean>(false);
-  const [isArm1EncoderOn, setIsArm1EncoderOn] = useState<boolean>(false);
+  const [isRoverEncoderOn, setIsRoverEncoderOn] = useState<boolean>(true);
+  const [isArm0EncoderOn, setIsArm0EncoderOn] = useState<boolean>(true);
+  const [isArm1EncoderOn, setIsArm1EncoderOn] = useState<boolean>(true);
 
   const cameraStates = {
     'rover_cam0': { displayName: 'Rover Cam 0', state: isRoverEncoderOn, setter: setIsRoverEncoderOn },
